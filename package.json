@@ -2,9 +2,10 @@
   "name": "echoapp",
   "version": "1.0.0",
   "description": "Echo App",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "test": "mocha --timeout 10000 --exit"
+    "test": "mocha --timeout 10000 --exit",
+    "start": "node -r dotenv/config server.js"
   },
   "repository": {
     "type": "git",
@@ -17,9 +18,20 @@
   },
   "homepage": "https://github.com/shawnmccarthy/week3#readme",
   "devDependencies": {
-    "chai": "^4.3.7",
+    "chai": "^4.5.0",
     "chai-http": "^4.4.0",
-    "mocha": "^11.0.1",
+    "mocha": "^11.7.5",
     "sinon": "^19.0.2"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [],
+  "dependencies": {
+    "dotenv": "^17.2.4",
+    "express": "^5.2.1"
+  },
+  "script": {
+    "start": "node -r dotenv/config server.js"
   }
 }
